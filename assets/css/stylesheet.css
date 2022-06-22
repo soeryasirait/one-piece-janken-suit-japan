@@ -1,0 +1,350 @@
+@keyframes luffywiggle {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none !important;
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    font-size: 16px;
+    line-height: 1.618em;
+    background-color: #e9e9e9;
+    color: #424242;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e9e9e9;
+    box-shadow: 0 5px 50px #aaa;
+}
+
+.splash .center {
+    width: 100%;
+    margin: auto;
+    padding: 165px 15px 15px;
+    background: url(../img/icon.png) center top no-repeat;
+    background-size: 180px;
+}
+
+.splash .center h2 {
+    margin: 0 0 20px;
+    padding-top: 35px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    color: #F79141;
+    -webkit-text-stroke: 2px #1A1A25;
+}
+
+.splash .center h1 {
+    margin: 0 0 20px;
+    padding-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    color: #F79141;
+    -webkit-text-stroke: 2px #1A1A25;
+}
+
+.splash .center button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.25em;
+    line-height: 1em;
+    background-color: #F79141;
+    color: #1A1A25;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 0 #CC6134;
+}
+
+.splash .center button:active {
+    transform: translateY(8px);
+    box-shadow: none;
+}
+
+.block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eceff1;
+}
+
+.block span {
+    margin: auto;
+    padding: 30px;
+}
+
+.modal-page-1,
+.modal-page-2,
+.modal-page-3 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-page-1 {
+    z-index: 275;
+}
+
+.modal-page-2 {
+    z-index: 276;
+}
+
+.modal-page-3 {
+    z-index: 277;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #eceff1;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #1A1A25;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #F79141;
+    color: #1A1A25;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-body p {
+    text-align: left;
+    padding: 1px 0;
+}
+
+.img-page-1 {
+    max-width: 80%;
+}
+
+.img-page-2,
+.img-page-3 {
+    max-width: 85%;
+}
+
+.modal-footer {
+    padding: 1px 16px;
+    background-color: #F79141;
+    color: #1A1A25;
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.page1,
+.page2,
+.page3 {
+    color: #1A1A25;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.prev {
+    color: #1A1A25;
+    background-color: transparent;
+    border: none;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.next {
+    padding: 5px 0;
+    color: #1A1A25;
+    background-color: transparent;
+    border: none;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.prev:hover,
+.prev:focus,
+.next:hover,
+.next:focus {
+    color: #eceff1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#luffy {
+    display: inline-block;
+    width: 100%;
+    height: 280px;
+    background-image: url(../img/new-luffy.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.goyang {
+    animation: luffywiggle .75s infinite;
+}
+
+.skor {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 200;
+    transform: translateY(-50%);
+    padding: 30px 15px;
+    background-color: #F79141;
+    color: #1A1A25;
+    font-size: 2em;
+    border: solid 3px #CC6134;
+    border-left: none;
+    border-radius: 0 30px 30px 0;
+    box-shadow: 0 5px 10px #1A1A25;
+}
+
+.skor span {
+    display: block;
+    padding-bottom: 20px;
+    cursor: help;
+}
+
+.skor span+span {
+    padding: 20px 0 0;
+    border-top: solid 1px #1A1A25;
+}
+
+.skor .skor-luffy,
+.skor .skor-player {
+    font-weight: bold;
+}
+
+.pilih {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 150;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 100%;
+    padding: 10px 30px 15px;
+    white-space: nowrap;
+    background-color: #F79141;
+    border-top: solid 5px #CC6134;
+    box-shadow: 5px 5px 10px #1A1A25;
+}
+
+.pilih button {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border: 3px solid #1B1B26;
+    border-radius: 50%;
+    box-shadow: 0 8px 0 #CC6134;
+}
+
+.pilih button.disabled {
+    filter: grayscale(100%);
+}
+
+.pilih button+button {
+    margin-left: 10px;
+}
+
+.pilih button:active {
+    transform: translateY(8px);
+    box-shadow: none;
+}
+
+.pilih #batu {
+    background: url(../img/player-batu.png) center center no-repeat;
+    background-size: contain;
+}
+
+.pilih #kertas {
+    background: url(../img/player-kertas.png) center center no-repeat;
+    background-size: contain;
+}
+
+.pilih #gunting {
+    background: url(../img/player-gunting.png) center center no-repeat;
+    background-size: contain;
+}
+
+#reset {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    padding: 10px 20px;
+    line-height: 1em;
+    color: #1A1A25;
+    font-size: .8em;
+    border: dashed 2px #CC6134;
+    border-radius: 50px;
+}
+
+#back {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+    padding: 10px 20px;
+    line-height: 1em;
+    color: #1A1A25;
+    font-size: .8em;
+    border: dashed 2px #CC6134;
+    border-radius: 50px;
+}

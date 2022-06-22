@@ -1,0 +1,40 @@
+@media (min-width: 500px) {
+    .splash .center {
+        padding-top: 240px;
+        background-size: 260px;
+    }
+    .splash .center h1,
+    .splash .center h2 {
+        margin: 0 0 30px;
+        font-size: 3em;
+        -webkit-text-stroke: 3px #1A1A25;
+    }
+    .splash .center button {
+        margin-top: 15px;
+        font-size: 1.5em;
+    }
+    .skor {
+        min-width: 80px;
+    }
+    .pilih {
+        width: auto;
+        padding: 10px 50px 15px;
+        border: solid 5px #CC6134;
+        border-bottom: none;
+        border-radius: 50px 50px 0 0;
+    }
+    .pilih button {
+        width: 90px;
+        height: 90px;
+    }
+    #reset,
+    #back {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 300px) and (min-height: 500px) {
+    .block {
+        display: none;
+    }
+}
